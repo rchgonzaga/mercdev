@@ -1,24 +1,27 @@
 import React, { Component } from 'react'
 import './App.css';
 import HeaderHome from './HeaderHome'
+import AnuncioHome from './AnuncioHome'
+import Footer from './Footer'
+import LinksCategoria from './LinksCategoria'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <HeaderHome />
-        <div className="col-lg-4 col-md-6 mb-4">
-          <div className="card h-100">
-            <a href="#"><img className="card-img-top" src="http://placehold.it/200x140" alt="" /></a>
-            <div className="card-body">
-              <h4 className="card-title">
-                <a to={`/anuncios/ver/`}>nome</a>
-              </h4>
-              <h5>preco</h5>
-              <p className="card-text">descricao</p>
+
+        <div className="container">
+          <h3> Anuncios </h3>
+            <div className="row">
+              <AnuncioHome />
+              <AnuncioHome />
+              <AnuncioHome />
             </div>
           </div>
-        </div>
+        <h3> Categorias </h3>
+        <LinksCategoria />
+        <Footer />
       </div>
     )
   }
